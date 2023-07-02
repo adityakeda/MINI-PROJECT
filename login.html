@@ -1,42 +1,19 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Responsive Login and Signup Form </title>
+<html>
+<head>
+  <title>ChallengeUp - Online Fitness Challenge Platform</title>
+  <style>
+    /* CSS styles here */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">
-                
-        <!-- Boxicons CSS -->
-        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-              
-        <style>
-            /* Google Fonts - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-.container{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #222222;
-    column-gap: 30px;
-}
-
-header {
+    header {
       background-color: #333;
       color: #ffffff;
       padding: 13px;
+      margin-bottom: 30px;
     }
 
     nav {
@@ -68,159 +45,140 @@ header {
       text-decoration: none;
     }
 
-.form{
-    position: absolute;
-    max-width: 430px;
-    width: 100%;
-    padding: 30px;
-    border-radius: 6px;
-    background: #FFF;
-}
-.form.signup{
-    opacity: 0;
-    pointer-events: none;
-}
-.forms.show-signup .form.signup{
-    opacity: 1;
-    pointer-events: auto;
-}
-.forms.show-signup .form.login{
-    opacity: 0;
-    pointer-events: none;
-}
-header{
-    font-size: 22px;
-    font-weight: 600;
-    color: #ffffff;
-    text-align: center;
-}
-form{
-    margin-top: 30px;
-}
-.form .field{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 6px;
-}
-.field input,
-.field button{
-    height: 100%;
-    width: 100%;
-    border: none;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 6px;
-}
-.field input{
-    outline: none;
-    padding: 0 15px;
-    border: 1px solid#CACACA;
-}
-.field input:focus{
-    border-bottom-width: 2px;
-}
-.eye-icon{
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: #8b8b8b;
-    cursor: pointer;
-    padding: 5px;
-}
-.field button{
-    color: #fff;
-    background-color: #292929;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-.field button:hover{
-    background-color: #ce0000;
-}
-.form-link{
-    text-align: center;
-    margin-top: 10px;
-}
-.form-link span,
-.form-link a{
-    font-size: 14px;
-    font-weight: 400;
-    color: #362323;
-}
-.form a{
-    color: #d30101;
-    text-decoration: none;
-}
-.form-content a:hover{
-    text-decoration: underline;
-}
-.line{
-    position: relative;
-    height: 1px;
-    width: 100%;
-    margin: 36px 0;
-    background-color: #d4d4d4;
-}
-.line::before{
-    content: 'Or';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #FFF;
-    color: #8b8b8b;
-    padding: 0 15px;
-}
+    .main{
+      background-image: url('\IMAGES\gym.jpg');
+      background-size: cover;
+    }
+
+    .about{
+      text-align: center;
+      
+    }
+
+    #t1{
+      text-align: center;
+      color:#000000;
+    }
+
+    #t2{
+      text-align: center;
+      color:#ec0505;
+    }
+
+    .about-content {
+      text-align: center;
+      color:#242323;
+    }
 
 
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-              <div class="logo">ChallengeUp</div>
-              <ul class="nav-links">
-                <li><a href="index.html"><strong>Home</strong></a></li>
-                <li><a href="challenges.html"><strong>Challenges</strong></a></li>
-                <li><a href="login.html"><strong>Login</strong></a></li> 
-              </ul>
-            </nav>
-          </header>
-        <section class="container forms">
-            <div class="form login">
-                <div class="form-content">
-                    <header>Login</header>
-                    <form action="#">
-                        <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
-                        </div>
+    .hero-content {
+      text-align: center;
+      color: #000000;
+      margin-top: 20px;
+    }
 
-                        <div class="field input-field">
-                            <input type="password" placeholder="Password" class="password">
-                            <i class='bx bx-hide eye-icon'></i>
-                        </div>
+    h1 {
+      font-size: 36px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
 
-                        
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
 
-                        <div class="field button-field">
-                            <button>Login</button>
-                        </div>
-                    </form>
+    .cta-button {
+      display: inline-block;
+      background-color: #f51818;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
-                    
-                </div>
+    .cta-image {
+      width: 500px;
+      max-width: 100%;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
 
+    footer {
+      background-color: #333;
+      color: #ffffff;
+      padding: 18px;
+      text-align: center;
+      margin-top: 50px;
+    }
 
-                
+    .challenge-section {
+      padding: 50px 0;
+      text-align: center;
+    }
 
-            </div>
+    .challenge-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
 
-        </section>
+    .challenge-section img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
 
-        <!-- JavaScript -->
-        <script src="js/script.js"></script>
-    </body>
+    .challenge-section p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<script src="./scripts/login.js"></script>
+<body>
+  <header>
+    <nav>
+      <div class="logo">ChallengeUp</div>
+      <ul class="nav-links">
+        <li><a href="login.html"><strong>Home</strong></a></li>
+        <li><a href="challenges.html"><strong>Challenges</strong></a></li>
+        <li><a href="index.html"><strong>Logout</strong></a></li> 
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="main">
+  <section class="about"><h1 id="t1"><strong>ABOUT</strong></h1><h1 id="t2"><strong>ChallengeUp</strong></h1>
+    <div class="about-content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Accusantium amet laborum cumque? Beatae illum inventore facilis iste,
+         praesentium laborum aperiam alias laboriosam adipisci iusto recusandae
+          ratione maxime error? Alias possimus consequuntur rem, ad reiciendis quae 
+          minima sint, veniam iusto libero similique quas voluptate nisi accusantium!
+           Porro, voluptatum totam qui nihil illo sequi autem harum reiciendis itaque 
+           sed inventore praesentium maxime iure fuga repudiandae, consequatur recusandae
+            natus. Ipsam sunt voluptates, labore obcaecati odio nesciunt, dolore ipsa 
+          error totam iusto hic cumque earum maxime, commodi unde eos aliquid ullam
+         facilis! Beatae ad quo odio.
+         Atque quibusdam mollitia, temporibus aspernatur repellendus non magnam?</p>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Take on the Challenge</h1>
+      <p>Join our online fitness challenges and push your limits!</p>
+      <a href="challenges.html" class="cta-button">Get Started</a>
+      <br>
+      <img src="\IMAGES\img1.jpg" width="1000px" height="290" alt="Gym Equipment" class="cta-image">
+    </div>
+  </section>
+</div>
+
+  <footer>
+    <p>&copy; 2023 ChallengeUp. All rights reserved. <br> Contact us on :- ChallengeUpfitness@gmail.com</p>
+  </footer>
+</body>
 </html>
